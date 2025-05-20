@@ -13,7 +13,7 @@ body{
     justify-content: center; /*controla o alinhamento horizontal dos elementos dentro do contêiner*/
     align-items: center; /*define o alinhamento vertical dos elementos dentro do elemento pai*/
     background-color: rgb(75, 75, 144);
-    padding: 20px
+    padding: 20px;
 }
 
 h3{
@@ -87,3 +87,7 @@ a {
 .cadastro{
     text-align: center;
 }
+
+/*input:hover{
+    border-color: rgb(75, 75, 144);
+}*/
