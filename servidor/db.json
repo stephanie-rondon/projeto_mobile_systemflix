@@ -1,44 +1,19 @@
 {
-  "posts": [
+  "cadastro": [
     {
       "id": "1",
-      "title": "a title",
-      "views": 100
+      "email": "ste@gmail.com",   
+      "senha": 123
     },
     {
       "id": "2",
-      "title": "another title",
-      "views": 200
+      "email": "mateus@gmail.com",
+      "senha": 456
     },
     {
-      "id": "1",
-      "title": "a title",
-      "views": 100
-    },
-    {
-      "id": "1",
-      "title": "TEST",
-      "views": 100
-    },
-    {
-      "id": "1",
-      "title": "TEST",
-      "views": 100
+      "id": "3",
+      "email": "dev@gmail.com",
+      "senha": 345
     }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
