@@ -1,0 +1,1 @@
+INSERT INTO usuarios(usuario_id, nome, email, telefone) VALUES (null, “Maria”, “maria.com”, 1369) ;
