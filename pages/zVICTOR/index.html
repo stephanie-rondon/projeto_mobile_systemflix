@@ -1,47 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Meu Perfil com Carrossel</title>
-    <link rel="stylesheet" href="styles.css"
+  <meta charset="UTF-8">
+  <title>Editar Perfil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
 
-    <img src="https://lh3.googleusercontent.com/a/ACg8ocLI_M3vctq-NWFOzncR9D2yoCoHWwFnSirG-Y-J80WYTEEGh4-O=s360-c-no" alt="Minha foto de perfil" width="200" height="200"
-    class="foto-perfil">
+  <h1>Editar perfil</h1>
 
-    <div class="container">
-    <!-- Lado esquerdo: Perfil -->
-    <div class="profile-section">
-       
-        <h2>Meu perfil</h2>
-        <h3>Victor Gabriel</h3>
-        <p>victor.soares.silva27@escola.pr.gov.br</p>
+  <img src="https://lh3.googleusercontent.com/a/ACg8ocLI_M3vctq-NWFOzncR9D2yoCoHWwFnSirG-Y-J80WYTEEGh4-O=s360-c-no" alt="Victor">
+  <input type="text" value="Seu nome">
 
-        <button>Minha lista</button>
-        <button>Avaliações</button>
-        <button>Assinaturas</button>
+  <label>Idioma:</label>
+  <select>
+    <option>Português</option>
+    <option>Inglês</option>
+    <option>Espanhol</option>
+  </select>
 
-        <div class="rating">
-            ⭐ 8,6/10
-        </div>
-    </div>
+  <button class="gray-btn">TODAS AS CLASSIFICAÇÕES ETÁRIAS</button>
+  <p class="descricao">Mostrar títulos de <b>todas as classificações etárias</b> para este perfil.</p>
+  <button class="disabled-btn" disabled>EDITAR</button>
 
-    <!-- Lado direito: Carrossel -->
-    <div class="carousel-section">
-        <button class="arrow left">&#10094;</button>
+  <p><b>Controles de início automático</b></p>
+  <label><input type="checkbox"> Iniciar automaticamente o próximo episódio</label>
+  <label><input type="checkbox"> Reproduzir automaticamente as prévias</label>
 
-        <div class="carousel">
-            <div class="item">Item 1</div>
-            <div class="item">Item 2</div>
-            <div class="item">Item 3</div>
-            <div class="item">Item 4</div>
-            <div class="item">Item 5</div>
-        </div>
+  <br><br>
+  <button class="save-btn" onclick="salvar()">SALVAR</button>
+  <button class="cancel-btn" onclick="cancelar()">CANCELAR</button>
 
-        <button class="arrow right">&#10095;</button>
-    </div>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
