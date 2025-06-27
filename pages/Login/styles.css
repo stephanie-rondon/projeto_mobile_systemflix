@@ -5,54 +5,58 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Montserrat", sans-serif;
     color: #404040;
-    display: flex; 
+    display: flex;
     height: 100vh;
-    justify-content: center; /*controla o alinhamento horizontal dos elementos dentro do contêiner*/
-    align-items: center; /*define o alinhamento vertical dos elementos dentro do elemento pai*/
+    justify-content: center;
+    /*controla o alinhamento horizontal dos elementos dentro do contêiner*/
+    align-items: center;
+    /*define o alinhamento vertical dos elementos dentro do elemento pai*/
     background-color: rgb(75, 75, 144);
     padding: 20px;
 }
 
-h3{
+h3 {
     font-size: 24px;
 }
 
-form{
+form {
     padding: 50px;
     background-color: white;
-    border-radius: 30px; /*arredondando os cantos*/
-    display:flex;
+    border-radius: 30px;
+    /*arredondando os cantos*/
+    display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.barra-horizontal{ /*selecionar um elemento aki no css pela classe*/
+.barra-horizontal {
+    /*selecionar um elemento aki no css pela classe*/
     background-color: rgb(75, 75, 144);
     height: 3px;
     width: 210px;
 }
 
-.campo-input{
+.campo-input {
     display: flex;
     flex-direction: column;
-    gap:5px;
+    gap: 5px;
 }
 
-.lembrar-me{
+.lembrar-me {
     display: flex;
     gap: 5px;
 }
 
-.titulo{
+.titulo {
     display: flex;
     flex-direction: column;
-    gap:5px;           
+    gap: 5px;
 }
 
-button{
+button {
     padding: 10px;
     align-self: center;
     width: 160px;
@@ -68,11 +72,12 @@ button:hover {
     color: white;
     transition: 0.3s;
 }
-  
-input{
+
+input {
     padding: 10px;
     border-radius: 10px;
-    border: none;background-color: #f1f1f1;
+    border: none;
+    background-color: #f1f1f1;
 }
 
 a {
@@ -80,11 +85,11 @@ a {
     font-weight: 500;
 }
 
-.esqueceu-senha{
+.esqueceu-senha {
     text-align: center;
 }
 
-.cadastro{
+.cadastro {
     text-align: center;
 }
 

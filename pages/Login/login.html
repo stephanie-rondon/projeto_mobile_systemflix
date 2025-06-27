@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="">
+    <form id="formLogin">
         <div class="titulo">
             <h3>Faça o seu login</h3>
             <div class="barra-horizontal"></div>
@@ -23,52 +23,13 @@
             <label for="senha">Sua senha*</label>
             <input type="password" id="senha" />
         </div>
-        <div class="lembrar-me">
-            <input type="checkbox" />
-            <p>Lembrar-me</p>
-        </div>
         <button id="btnEntrar">Entrar</button>
-        <p class="esqueceu-senha">
-            Esqueceu a sua senha?
-            <a href="esqueceu-senha.html">Clique aqui</a>
-        </p>
         <p class="cadastro">
             Ainda não tem uma conta?
             <a href="cadastro.html">Cadastre-se</a>
         </p>
-        <input type="submit" onclick="logar(); return false">
     </form>
     <script src="login.js"></script>
-
-    <script>
-        function logar(email, senha) {
-            fetch('http://localhost:3000/cadastro')
-                .then(response => response.json())
-                .then(dados => {
-
-                    const login = dados.find(user => user.email === email && user.senha === senha);
-
-                    if (usuario) {
-                        console.log("login bem sucedido")
-                        alert("login bem sucedido");
-                    }
-                })
-
-
-        }
-    </script>
-
 </body>
 
 </html>
-
-<!--          
-var login = document.getElementById('login').value;
-var senha = document.getElementById('senha').value;
-
-if (login == "" && senha == "") {
-    alert('Sucesso');
-    location.href = "../page2/index2.html";
-} else {
-    alert('Email ou senha incorretos');
-}-->
