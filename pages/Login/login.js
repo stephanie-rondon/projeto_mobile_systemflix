@@ -26,8 +26,6 @@ document.getElementById('formLogin').addEventListener('submit', async function (
       return;
     }
 
-    alert('Login realizado com sucesso!');
-
     localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
 
     window.location.href = '../page2/index2.html';
