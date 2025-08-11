@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SystemFlix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="InvocaçãoAVc.css">
+</head>
+<body>
+    <div class="menu">
+        <img src="menu.png" alt="menu" class="menu-icon">
+        <img class="logo" src="logo.png" alt="logo">
+    </div>
+
+    <div class="filme">
+        <img class="Poster" src="poster invocação.jpg" alt="Poster">
+        <div class="texto-filme">
+            <h1>Invocação do Mal</h1>
+            <p class="sinopse">
+                Invocação do Mal é um filme estadunidense do gênero terror dirigido por James Wan. É o primeiro filme do Universo The Conjuring. Estrelado por Vera Farmiga e Patrick Wilson, a produção centra-se em dois investigadores paranormais mundialmente conhecidos, que foram contratados para investigar fenômenos sobrenaturais que assombram à família Perron, moradores da pequena e isolada cidade de Harrisville. No Brasil, sua estreia ocorreu no dia 13 de setembro de 2013. Após o seu lançamento, o longa obteve uma excelente recepção, tanto comercial quanto da crítica especializada em cinema. Invocação do Mal é considerado por muitos críticos de cinema o melhor filme de assombração da última década. Também o consideram como um remake de The Haunting (filme de 1963, que ganhou uma segunda versão em 1999) e The Haunted, de 1991.
+            </p>
+        </div>
+    </div>
+
+    <div id="avaliacao" class="avaliacao">
+        <h2>Avaliações</h2>
+        <div id="dados-avaliacao">Carregando avaliações...</div>
+    </div>
+
+    <script>
+        const apiKey = 'fc9bcf7d';
+        fetch(`https://www.omdbapi.com/?t=The+Conjuring&apikey=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                const ratingsHTML = `
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem; color: gold;">⭐ ${data.imdbRating}</div>
+                        <div>
+                            <p style="margin: 5px 0; font-weight: bold;">IMDb</p>
+                            <p style="margin: 0; font-size: 0.9em;">${data.imdbVotes} votos</p>
+                        </div>
+                    </div>
+                    ${data.Ratings.map(rating => `
+                        <div style="margin-bottom: 10px;">
+                            <p style="margin: 5px 0; font-weight: bold;">${rating.Source}</p>
+                            <p style="margin: 0; font-size: 1.1em;">${rating.Value}</p>
+                        </div>
+                    `).join('')}
+                `;
+                document.getElementById('dados-avaliacao').innerHTML = ratingsHTML;
+            });
+    </script>
+</body>
+</html>
