@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker</title>
+    <link rel="stylesheet" href="coringaAVc.css">
+</head>
+<body>
+    <div class="menu">
+        <img src="menu.png" alt="menu" class="menu-icon">
+        <img class="logo" src="logo.png" alt="logo">
+    </div>
+
+    <div class="filme">
+        <img class="Poster" src="coringa v.jpg" alt="Poster">
+        <div class="texto-filme">
+            <h1>Coringa</h1>
+            <p class="sinopse">Joker (prt: Joker; bra: Coringa) é um filme de suspense psicológico norte-americano de 2019 dirigido por Todd Phillips, que co-escreveu o roteiro com Scott Silver. Baseado no personagem de mesmo nome da DC Comics, o filme é estrelado por Joaquin Phoenix como o Coringa</p>
+        </div>
+    </div>
+
+    <div id="avaliacao" class="avaliacao">
+        <h2>Avaliações</h2>
+        <div id="dados-avaliacao">Carregando avaliações...</div>
+    </div>
+
+    <script>
+        const apiKey = 'fc9bcf7d';
+        const tituloFilme = 'Joker';
+        fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(tituloFilme)}&apikey=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                const ratingsHTML = `
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem; color: gold;">⭐ ${data.imdbRating}</div>
+                        <div>
+                            <p style="margin: 5px 0; font-weight: bold;">IMDb</p>
+                            <p style="margin: 0; font-size: 0.9em;">${data.imdbVotes} votos</p>
+                        </div>
+                    </div>
+                    ${data.Ratings ? data.Ratings.map(rating => `
+                        <div style="margin-bottom: 10px;">
+                            <p style="margin: 5px 0; font-weight: bold;">${rating.Source}</p>
+                            <p style="margin: 0; font-size: 1.1em;">${rating.Value}</p>
+                        </div>
+                    `).join('') : ''}
+                `;
+                document.getElementById('dados-avaliacao').innerHTML = ratingsHTML;
+            });
+    </script>
+</body>
+</html>

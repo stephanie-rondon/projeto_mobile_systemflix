@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WALL-E</title>
+    <link rel="stylesheet" href="walleAVc.css">
+</head>
+<body>
+    <div class="menu">
+        <img src="menu.png" alt="menu" class="menu-icon">
+        <img class="logo" src="logo.png" alt="logo">
+    </div>
+
+    <div class="filme">
+        <img class="Poster" src="walle v.webp" alt="Poster">
+        <div class="texto-filme">
+            <h1>WALL-E</h1>
+            <p class="sinopse">WALL-E (estilizado como WALL·E) é um filme de animação americano de 2008 produzido pela Pixar Animation Studios e dirigido por Andrew Stanton.
+                Depois de dirigir Finding Nemo, Stanton achou que a Pixar havia criado simulações críveis de físicas submarinas e estava disposto a dirigir um filme que se passasse em sua maior parte no espaço. A maioria dos personagens não possui uma voz humana, se comunicando apenas por linguagem corporal e sons que lembram vozes, criados por Ben Burtt. Além disso, é o primeiro filme da Pixar a ter segmentos com atores reais.
+            </p>
+        </div>
+    </div>
+
+    <div id="avaliacao" class="avaliacao">
+        <h2>Avaliações</h2>
+        <div id="dados-avaliacao">Carregando avaliações...</div>
+    </div>
+
+    <script>
+        const apiKey = 'fc9bcf7d';
+        const tituloFilme = 'WALL-E';
+        fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(tituloFilme)}&apikey=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                const ratingsHTML = `
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem; color: gold;">⭐ ${data.imdbRating}</div>
+                        <div>
+                            <p style="margin: 5px 0; font-weight: bold;">IMDb</p>
+                            <p style="margin: 0; font-size: 0.9em;">${data.imdbVotes} votos</p>
+                        </div>
+                    </div>
+                    ${data.Ratings ? data.Ratings.map(rating => `
+                        <div style="margin-bottom: 10px;">
+                            <p style="margin: 5px 0; font-weight: bold;">${rating.Source}</p>
+                            <p style="margin: 0; font-size: 1.1em;">${rating.Value}</p>
+                        </div>
+                    `).join('') : ''}
+                `;
+                document.getElementById('dados-avaliacao').innerHTML = ratingsHTML;
+            });
+    </script>
+</body>
+</html>
