@@ -86,14 +86,14 @@ body {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: red;
+    background: rgb(36, 36, 92);
     color: white;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .btn:hover {
-    background: darkred;
+    background: rgb(55, 55, 117);
 }
 
 /* Ajustes para telas pequenas */
