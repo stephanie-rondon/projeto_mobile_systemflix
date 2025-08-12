@@ -28,8 +28,6 @@ document.getElementById('formLogin').addEventListener('submit', async function (
 
     localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
 
-    window.location.href = '../page2/index2.html';
-
   } catch (erro) {
     console.error('Erro ao fazer login:', erro);
     alert('Erro de conexão com o servidor.');
