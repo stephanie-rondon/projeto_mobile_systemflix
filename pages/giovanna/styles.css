@@ -4,12 +4,14 @@ html {
 
 body {
   margin: 0;
-  
+
   font-family: Arial, sans-serif;
- background: linear-gradient(to bottom, rgb(68, 10, 161), #936dec);
+  background: linear-gradient(to bottom, rgb(68, 10, 161), #936dec);
 }
+
 .titulo {
-    padding-left: 20px; /* ← isso empurra o conteúdo para a direita */
+  padding-left: 20px;
+  /* ← isso empurra o conteúdo para a direita */
 }
 
 h1 {
@@ -26,10 +28,6 @@ h1 {
   width: 50px;
   height: auto;
   margin-left: 0;
-}
-
-.minha-navbar {
-  
 }
 
 .anuncio-filmes {
@@ -106,27 +104,35 @@ h1 {
     grid-template-columns: repeat(2, auto);
   }
 }
+
 .anuncio-filmes {
   background-color: rgb(0, 0, 95);
   margin: 0 auto;
   border-radius: 8px;
 }
+
 .anuncio-filmes {
   background-color: transparent;
   padding: 20px;
 }
+
 .cabecalho {
   background-color: #39006e;
 }
+
 .cabecalho h1 {
   background: linear-gradient(to right, #512277, #8a42ff);
   font-family: 'Orbitron', sans-serif;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size:2rem; /* bem grande */
-  letter-spacing: 3px; /* espaçamento para dar impacto */
-  padding-bottom: 20px; /* aumenta o espaço interno abaixo do texto */
+  font-size: 2rem;
+  /* bem grande */
+  letter-spacing: 3px;
+  /* espaçamento para dar impacto */
+  padding-bottom: 20px;
+  /* aumenta o espaço interno abaixo do texto */
 }
+
 .imagem-com-texto {
   position: relative;
   display: inline-block;
@@ -149,36 +155,52 @@ h1 {
   color: #ddd;
   text-shadow: 1px 1px 5px #000;
 }
+
 .texto-sobre-imagem {
   position: absolute;
-  top: 50%;               /* centraliza verticalmente */
-  left: 50%;              /* centraliza horizontalmente */
+  top: 50%;
+  /* centraliza verticalmente */
+  left: 50%;
+  /* centraliza horizontalmente */
   transform: translate(-50%, -50%);
   color: white;
   font-size: 2.5rem;
   font-weight: bold;
   text-shadow: 2px 2px 8px black;
-  background-color: rgba(0, 0, 0, 0.4); /* fundo semitransparente */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* fundo semitransparente */
   padding: 10px 20px;
   border-radius: 8px;
 }
 
 
 .carousel-item {
-  height: 200px; /* altura fixa para todos os slides */
+  height: 200px;
+  /* altura fixa para todos os slides */
   position: relative;
 }
 
 .carousel-item img {
   height: 100%;
   width: 100%;
-  object-fit: cover; /* garante que a imagem preencha o espaço sem distorcer */
+  object-fit: cover;
+  /* garante que a imagem preencha o espaço sem distorcer */
 }
+
 .carousel-item img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 12px; /* ajuste o valor como quiser */
+  border-radius: 12px;
+  /* ajuste o valor como quiser */
 }
 
+#btn-search {
+  color: white;
+  border: 1px solid #936dec;
+}
 
+#btn-search:hover{
+  color: white;
+  background-color: #936dec;
+}
