@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Destination: Bloodlines</title>
+    <link rel="stylesheet" href="premoniçãoAVc.css">
+</head>
+<body>
+    <div class="menu">
+        <img class="logo" src="logo.png" alt="logo">
+    </div>
+
+    <div class="filme">
+        <img class="Poster" src="premonicao v.jpg" alt="Poster">
+        <div class="texto-filme">
+            <h1>Premonição 6</h1>
+            <p class="sinopse">Final Destination Bloodlines (prt: O Último Destino: Descendência; bra: Premonição 6: Laços de Sangue) é um filme norte-americano de 2025, do gênero terror sobrenatural, dirigido por Zach Lipovsky e Adam Stein. O roteiro foi escrito por Guy Busick e Lori Evans Taylor, com base em uma história desenvolvida por eles em parceria com Jon Watts. É o sexto filme da franquia Final Destination, sucedendo Final Destination 5 (2011).</p>
+        </div>
+    </div>
+    <div>
+        <a href="../../giovanna/index.html" class="btn" id="btn-voltar">Voltar</a>
+    </div>
+    <div id="avaliacao" class="avaliacao">
+        <h2>Avaliações</h2>
+        <div id="dados-avaliacao">Carregando avaliações...</div>
+    </div>
+
+    <script>
+        const apiKey = 'fc9bcf7d';
+        const tituloFilme = 'Final Destination: Bloodlines';
+        fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(tituloFilme)}&apikey=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                const ratingsHTML = `
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem; color: gold;">⭐ ${data.imdbRating}</div>
+                        <div>
+                            <p style="margin: 5px 0; font-weight: bold;">IMDb</p>
+                            <p style="margin: 0; font-size: 0.9em;">${data.imdbVotes} votos</p>
+                        </div>
+                    </div>
+                    ${data.Ratings ? data.Ratings.map(rating => `
+                        <div style="margin-bottom: 10px;">
+                            <p style="margin: 5px 0; font-weight: bold;">${rating.Source}</p>
+                            <p style="margin: 0; font-size: 1.1em;">${rating.Value}</p>
+                        </div>
+                    `).join('') : ''}
+                `;
+                document.getElementById('dados-avaliacao').innerHTML = ratingsHTML;
+            });
+    </script>
+</body>
+</html>

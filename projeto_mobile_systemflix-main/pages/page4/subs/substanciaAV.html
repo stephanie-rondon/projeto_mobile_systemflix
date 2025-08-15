@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Substance</title>
+    <link rel="stylesheet" href="substanciaAVc.css">
+</head>
+<body>
+    <div class="menu">
+        <img class="logo" src="logo.png" alt="logo">
+    </div>
+
+    <div class="filme">
+        <img class="Poster" src="subs v.webp" alt="Poster">
+        <div class="texto-filme">
+            <h1>A substância</h1>
+            <p class="sinopse">O filme estreou em 19 de maio de 2024 no 77º Festival de Cinema de Cannes, e foi selecionado para competir pela Palma de Ouro em sua seção de competição principal, onde Fargeat ganhou o prêmio de Melhor Roteiro. Foi lançado nos cinemas do Reino Unido e dos Estados Unidos pela Mubi em 20 de setembro de 2024 e da França pela Metropolitan Filmexport em 6 de novembro de 2024. Nas bilheterias, o filme arrecadou US$ 79,1 milhões com um orçamento de produção de US$ 17,5 milhões e se tornou o filme de maior bilheteria da Mubi.</p>
+        </div>
+    </div>
+    <div>
+        <a href="../../giovanna/index.html" class="btn" id="btn-voltar">Voltar</a>
+    </div>
+    <div id="avaliacao" class="avaliacao">
+        <h2>Avaliações</h2>
+        <div id="dados-avaliacao">Carregando avaliações...</div>
+    </div>
+
+    <script>
+        const apiKey = 'fc9bcf7d';
+        const tituloFilme = 'The Substance';
+        fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(tituloFilme)}&apikey=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                const ratingsHTML = `
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem; color: gold;">⭐ ${data.imdbRating}</div>
+                        <div>
+                            <p style="margin: 5px 0; font-weight: bold;">IMDb</p>
+                            <p style="margin: 0; font-size: 0.9em;">${data.imdbVotes} votos</p>
+                        </div>
+                    </div>
+                    ${data.Ratings ? data.Ratings.map(rating => `
+                        <div style="margin-bottom: 10px;">
+                            <p style="margin: 5px 0; font-weight: bold;">${rating.Source}</p>
+                            <p style="margin: 0; font-size: 1.1em;">${rating.Value}</p>
+                        </div>
+                    `).join('') : ''}
+                `;
+                document.getElementById('dados-avaliacao').innerHTML = ratingsHTML;
+            });
+    </script>
+</body>
+</html>

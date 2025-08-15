@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozen</title>
+    <link rel="stylesheet" href="frozenAVc.css">
+</head>
+<body>
+    <div class="menu">
+        <img class="logo" src="logo.png" alt="logo">
+    </div>
+
+    <div class="filme">
+        <img class="Poster" src="frozen v.webp" alt="Poster">
+        <div class="texto-filme">
+            <h1>Frozen</h1>
+            <p class="sinopse">Frozen (bra: Frozen - Uma Aventura Congelante ou Frozen: Uma Aventura Congelante; prt: Frozen - O Reino do Gelo ou Frozen: O Reino do Gelo) é um filme de animação musical estadunidense de 2013, o 53.º animado dos Clássicos Disney produzido pela Walt Disney Animation Studios e distribuído pela Walt Disney Pictures. Inspirado pelo conto de fadas A Rainha da Neve, de Hans Christian Andersen, narra as desventuras das irmãs reais de Arendelle.</p>
+        </div>
+    </div>
+    <div>
+        <a href="../../giovanna/index.html" class="btn" id="btn-voltar">Voltar</a>
+    </div>
+    <div id="avaliacao" class="avaliacao">
+        <h2>Avaliações</h2>
+        <div id="dados-avaliacao">Carregando avaliações...</div>
+    </div>
+
+    <script>
+        const apiKey = 'fc9bcf7d';
+        const tituloFilme = 'Frozen';
+        fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(tituloFilme)}&apikey=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                const ratingsHTML = `
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem; color: gold;">⭐ ${data.imdbRating}</div>
+                        <div>
+                            <p style="margin: 5px 0; font-weight: bold;">IMDb</p>
+                            <p style="margin: 0; font-size: 0.9em;">${data.imdbVotes} votos</p>
+                        </div>
+                    </div>
+                    ${data.Ratings ? data.Ratings.map(rating => `
+                        <div style="margin-bottom: 10px;">
+                            <p style="margin: 5px 0; font-weight: bold;">${rating.Source}</p>
+                            <p style="margin: 0; font-size: 1.1em;">${rating.Value}</p>
+                        </div>
+                    `).join('') : ''}
+                `;
+                document.getElementById('dados-avaliacao').innerHTML = ratingsHTML;
+            });
+    </script>
+</body>
+</html>
