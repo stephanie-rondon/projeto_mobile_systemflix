@@ -71,6 +71,22 @@ body {
     margin-top: 0;
 }
 
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background:  rgb(36, 36, 92);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#btn-voltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .filme {
         flex-direction: column;

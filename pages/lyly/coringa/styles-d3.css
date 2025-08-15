@@ -92,6 +92,13 @@ body {
     text-decoration: none;
 }
 
+#btn-voltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+}
+
 .btn:hover {
     background:  rgb(55, 55, 117);
 }
