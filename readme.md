@@ -13,4 +13,3 @@ Realização completa da página de usuário;
 Realização completa da página de inicio;
 Realização parcial da página de filmes + descrição;
 Realização parcial da página de avaliações.
-
