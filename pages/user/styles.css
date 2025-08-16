@@ -1,89 +1,105 @@
 body {
-  background: #111;
+  background: linear-gradient(to bottom, #4b4b90, #936dec);
   color: #fff;
-  font-family: sans-serif;
-  padding: 20px;
-  max-width: 400px;
-  margin: auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 80px;
+}
+
+.menu {
+  background-color: rgb(40, 40, 74);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, rgb(75, 75, 144), #936dec);
+  padding-top: 120px;
+}
+
+.logo {
+  width: 340px;
+  height: auto;
+}
+
+.perfil-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  text-align: center;
 }
 
 h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.foto-usuario {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.nome-usuario {
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
-img {
-  width: 60px;
-  border-radius: 20px;
+.botoes-perfil {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-input[type="text"], select {
-  width: 150%;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  background: #333;
-  color: #fff;
+.edit-btn, .logout-btn {
+  padding: 12px 25px;
+  border-radius: 15px;
   border: none;
-
-}
-
-button {
-  padding: 10px 70px;
-  margin: 20px 0;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
-}
-
-.gray-btn {
-  background: #444;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.disabled-btn {
-  background: #222;
-  color: #666;
-  cursor: not-allowed;
-}
-
-.save-btn {
-  background: white;
-  color: black;
   font-weight: bold;
-  margin-right: 10px;
+  font-size: 0.9rem;
 }
 
-.cancel-btn {
-  background: #333;
-  max-width: 15 0%;
-  color: white;
+.edit-btn {
+  background-color: #fff;
+  color: #000;
 }
 
-label {
-  font-size: 14px;
-  display: block;
-  margin: 10px 0 5px;
+.logout-btn {
+  background-color: #555;
+  color: #fff;
 }
 
-input[type="checkbox"] {
-  margin-right: 5px;
-}
+@media (max-width: 480px) {
+  .perfil-container {
+    padding: 20px 15px;
+  }
 
-.descricao {
-  font-size: 20px;
-}
+  .foto-usuario {
+    width: 100px;
+    height: 100px;
+  }
 
-.logo2 {
-margin-left: 200%;
-width: 100px;
-}
+  h1 {
+    font-size: 1.5rem;
+  }
 
-p {
-  font-size: 25px;
-}
-
-.foto1 {
-  margin-left: -25%;
-  width: 70px;
+  .edit-btn, .logout-btn {
+    padding: 10px 20px;
+  }
 }
