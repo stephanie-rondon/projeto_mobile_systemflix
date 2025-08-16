@@ -4,36 +4,75 @@ html {
 
 body {
   margin: 0;
-
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, rgb(68, 10, 161), #936dec);
+  background: linear-gradient(to bottom, rgb(75, 75, 144), #936dec);
+  padding-top: 100px;
 }
 
-.titulo {
-  padding-left: 20px;
-  /* ← isso empurra o conteúdo para a direita */
-}
-
-h1 {
-  color: #39006e;
-  text-align: center;
-}
-
-.cabecalho {
-  text-align: center;
-  padding-top: 20px;
+.menu {
+  background-color: rgb(40, 40, 74);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .logo-img {
   width: 50px;
   height: auto;
-  margin-left: 0;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form.d-flex {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+form.d-flex input.form-control[type="search"] {
+  flex: 1;
+  width: 100% !important;
+  max-width: 400px !important;
+  min-width: 150px;
+  margin-right: 10px;
+}
+
+#btn-search {
+  color: white;
+  border: 1px solid #936dec;
+}
+
+#btn-search:hover {
+  color: white;
+  background-color: rgb(40, 40, 74);
+  ;
+}
+
+.titulo {
+  margin-top: 40px;
+  padding-left: 20px;
 }
 
 .anuncio-filmes {
-  background-color: rgb(75, 75, 144);
+  background-color: transparent;
   margin: 0 auto;
-  padding: 0;
+  padding: 20px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -44,8 +83,18 @@ h1 {
   border-radius: 8px;
 }
 
-.titulo {
-  margin-top: 40px;
+.texto-sobre-imagem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px black;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
 .wrapper {
@@ -103,35 +152,20 @@ h1 {
   .wrapper section {
     grid-template-columns: repeat(2, auto);
   }
+
+  form.d-flex input.form-control[type="search"] {
+    max-width: 250px;
+  }
+
+  #carouselExampleIndicators .carousel-inner {
+    max-height: none;
+  }
+
+  #carouselExampleIndicators .carousel-inner img {
+    height: auto;
+  }
 }
 
-.anuncio-filmes {
-  background-color: rgb(0, 0, 95);
-  margin: 0 auto;
-  border-radius: 8px;
-}
-
-.anuncio-filmes {
-  background-color: transparent;
-  padding: 20px;
-}
-
-.cabecalho {
-  background-color: #39006e;
-}
-
-.cabecalho h1 {
-  background: linear-gradient(to right, #512277, #8a42ff);
-  font-family: 'Orbitron', sans-serif;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2rem;
-  /* bem grande */
-  letter-spacing: 3px;
-  /* espaçamento para dar impacto */
-  padding-bottom: 20px;
-  /* aumenta o espaço interno abaixo do texto */
-}
 
 .imagem-com-texto {
   position: relative;
@@ -156,27 +190,7 @@ h1 {
   text-shadow: 1px 1px 5px #000;
 }
 
-.texto-sobre-imagem {
-  position: absolute;
-  top: 50%;
-  /* centraliza verticalmente */
-  left: 50%;
-  /* centraliza horizontalmente */
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px black;
-  background-color: rgba(0, 0, 0, 0.4);
-  /* fundo semitransparente */
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-
-
 .carousel-item {
-  height: 200px;
-  /* altura fixa para todos os slides */
   position: relative;
 }
 
@@ -184,23 +198,19 @@ h1 {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  /* garante que a imagem preencha o espaço sem distorcer */
-}
-
-.carousel-item img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
   border-radius: 12px;
-  /* ajuste o valor como quiser */
 }
 
-#btn-search {
-  color: white;
-  border: 1px solid #936dec;
+#carouselExampleIndicators{
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  object-position: center;
 }
 
-#btn-search:hover{
-  color: white;
-  background-color: #936dec;
+#carouselExampleIndicators .carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }

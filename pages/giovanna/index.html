@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,14 +8,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="styles.css">
-  
+
 </head>
+
 <body>
-<!--foi usada IA como suporte durante o processo. -->
+  <!--foi usada IA como suporte durante o processo. -->
 
-
- <div class="cabecalho">
-    <h1>Systemflix</h1>
+  <div class="menu">
+    <img src="assets/logo.png" alt="logo" class="logo" id="logo-img">
   </div>
 
   <nav class="navbar navbar-expand-lg navbar-light minha-navbar">
@@ -22,7 +23,7 @@
       <a class="navbar-brand" href="#">
         <img src="assets/perfil.png" alt="Perfil" class="logo-img">
       </a>
-      <form class="d-flex" role="search">
+      <form class="d-flex mx-auto" role="search">
         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
         <button id="btn-search" class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
@@ -30,42 +31,47 @@
   </nav>
 
   <div class="anuncio-filmes">
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
       </div>
-     <div class="carousel-inner">
-  <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
 
-    <!-- Slide 1 com texto -->
-    <div class="carousel-item active">
-      <img src="assets/Vista de 3d xícara de pipoca com assento de cinema _ imagem gerada com IA.jpg" class="d-block w-100" alt="Imagem 1">
-      <div class="texto-sobre-imagem">
-        <h2>Em breve: Cineminha Systemflix</h2>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/Vista de 3d xícara de pipoca com assento de cinema _ imagem gerada com IA.jpg"
+            class="d-block w-100" alt="Imagem 1">
+          <div class="texto-sobre-imagem">
+            <h2>Em breve: Cineminha Systemflix</h2>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="assets/the chosen.jpg" class="d-block w-100" alt="the chosen">
+        </div>
+
+        <div class="carousel-item">
+          <img src="assets/spidy.webp" class="d-block w-100" alt="spidy">
+        </div>
+
+        <div class="carousel-item">
+          <img src="assets/quartetof.jpeg" class="d-block w-100" alt="quarteto">
+        </div>
       </div>
-    </div>
 
-    <!-- Slide 2 -->
-    <div class="carousel-item">
-      <img src="assets/coraline poster H (1).jpg" class="d-block w-100" alt="Imagem 2">
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="carousel-item">
-      <img src="assets//substancia.jpg" class="d-block w-100" alt="Imagem 3">
-    </div>
-
-  </div>
-</div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Anterior</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Próximo</span>
       </button>
@@ -80,85 +86,87 @@
     <!-- Seções com imagens, busca ids e direcionar para uma página, busca funcional -->
     <!-- Use o mesmo padrão para section1, section2, section3 -->
   </div>
-<div class="anuncio-filmes">
-  <div id="carouselFilmes" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicadores -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselFilmes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselFilmes" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    </div>
+  <div class="anuncio-filmes">
+    <div id="carouselFilmes" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselFilmes" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselFilmes" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
 
-    <!-- Carroseis -->
-    <div class="carousel-inner">
+      <!-- Carroseis -->
+      <div class="carousel-inner">
 
-      <div class="carousel-item active">
-        <div class="row g-2">
-          <div class="col-6 col-md-3">
-            <a href="../lyly/coraline/index2.html">
-            <img src="assets/coraline poster H (1).jpg" class="d-block w-100" alt="coraline">
-            </a>
+        <div class="carousel-item active">
+          <div class="row g-2">
+            <div class="col-6 col-md-3">
+              <a href="../lyly/coraline/index2.html">
+                <img src="assets/coraline poster H (1).jpg" class="d-block w-100" alt="coraline">
+              </a>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <a href="../lyly/divertidamente/index2.html">
+                <img src="assets/divertidamente 2 poster H (1).png" class="d-block w-100" alt="divertidamente">
+              </a>
+            </div>
+
+
+            <div class="col-6 col-md-3">
+              <a href="../lyly/frozen/index2.html">
+                <img src="assets/frozen h (1).jpg" class="d-block w-100" alt="frozen">
+              </a>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <a href="../lyly/invocacao/index2.html">
+                <img src="assets/poster invocação h (1).jpeg" class="d-block w-100" alt="invocacao">
+              </a>
+            </div>
           </div>
+        </div>
 
-          <div class="col-6 col-md-3">
-            <a href="../lyly/divertidamente/index2.html">
-            <img src="assets/divertidamente 2 poster H (1).png" class="d-block w-100" alt="divertidamente">
-            </a>
-          </div>
+        <div class="carousel-item">
+          <div class="row g-2">
+            <div class="col-6 col-md-3">
+              <a href="../lyly/subs/index2.html">
+                <img src="assets/substancia.jpg" class="d-block w-100" alt="substancia">
+              </a>
+            </div>
 
-          
-          <div class="col-6 col-md-3">
-            <a href="../lyly/frozen/index2.html">
-            <img src="assets/frozen h (1).jpg" class="d-block w-100" alt="frozen">
-            </a>
-          </div>
+            <div class="col-6 col-md-3">
+              <a href="../lyly/coringa/index2.html">
+                <img src="assets/coringa poster H (1).jpg" class="d-block w-100" alt="coringa">
+              </a>
+            </div>
 
-          <div class="col-6 col-md-3">
-            <a href="../lyly/invocacao/index2.html">
-            <img src="assets/poster invocação h (1).jpeg" class="d-block w-100" alt="invocacao">
-            </a>
+            <div class="col-6 col-md-3">
+              <a href="../lyly/premonicao/index2.html">
+                <img src="assets/pre h.jpg" class="d-block w-100" alt="premonicao">
+              </a>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <a href="../lyly/walle/index2.html">
+                <img src="assets/WALLE H (1).jpg" class="d-block w-100" alt="walle">
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="carousel-item">
-        <div class="row g-2">
-          <div class="col-6 col-md-3">
-            <a href="../lyly/subs/index2.html">
-            <img src="assets/substancia.jpg" class="d-block w-100" alt="substancia">
-            </a>
-          </div>
-          
-          <div class="col-6 col-md-3">
-            <a href="../lyly/coringa/index2.html">
-            <img src="assets/coringa poster H (1).jpg" class="d-block w-100" alt="coringa">
-            </a>
-          </div>
-          
-          <div class="col-6 col-md-3">
-            <a href="../lyly/premonicao/index2.html">
-            <img src="assets/pre h.jpg" class="d-block w-100" alt="premonicao">
-            </a>
-          </div>
-
-          <div class="col-6 col-md-3">
-            <a href="../lyly/walle/index2.html">
-            <img src="assets/WALLE H (1).jpg" class="d-block w-100" alt="walle">
-            </a>
-          </div>
-        </div>
-      </div>
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselFilmes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselFilmes" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
     </div>
-
-    <!-- Controles -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFilmes" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselFilmes" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Próximo</span>
-    </button>
-  </div>
 
 </body>
+
 </html>
