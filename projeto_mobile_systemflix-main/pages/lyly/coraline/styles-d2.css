@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(75, 75, 144);
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Pôster + Descrição*/
+.top-section {
+    display: flex;
+    flex-wrap: nowrap; /* impede empilhar */
+    gap: 20px;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.poster {
+    flex-shrink: 0; /* mantém tamanho fixo */
+}
+
+.poster img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.descricao {
+    flex: 1;
+    min-width: 0; /* permite encolher */
+}
+
+.descricao h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.descricao p {
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* Carrossel responsivo */
+.elenco {
+    margin-top: 40px;
+}
+
+.carousel {
+    margin-top: 20px;
+    overflow-x: auto; /* permite rolar no celular */
+    display: flex;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel img {
+    height: 160px;
+    width: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Remove barra de rolagem no Chrome */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botão Avaliação */
+.avaliacao {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background:  rgb(36, 36, 92);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background:  rgb(55, 55, 117);
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 480px) {
+    .poster img {
+        max-width: 150px;
+    }
+    .descricao h1 {
+        font-size: 1.2rem;
+    }
+    .descricao p {
+        font-size: 0.9rem;
+    }
+    .carousel img {
+        height: 120px;
+    }
+}
