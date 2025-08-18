@@ -13,3 +13,5 @@ Realização completa da página de usuário;
 Realização completa da página de inicio;
 Realização parcial da página de filmes + descrição;
 Realização parcial da página de avaliações.
+
+Link do protótipo: https://www.figma.com/proto/Cvp8CWQL4X9loRwZNkQTsY/Untitled?node-id=0-1&t=LjFIw73nRTqeFShu-1
