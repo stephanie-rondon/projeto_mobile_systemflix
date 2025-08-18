@@ -27,4 +27,4 @@ A página inicial, tem erros na área de busca de filmes. A Giovanna tentou, mas
 
 A página da Kemylly não usou API, nem a Giovanna nem o Victor.
 
-Apenas o Giovanni usou API para captar as avaliações de filmes do IMDb. O link da API utlizada é:
+Apenas o Giovanni usou API para captar as avaliações de filmes de sites de critíca, como IMDb. O link da API utlizada é: https://www.omdbapi.com/
